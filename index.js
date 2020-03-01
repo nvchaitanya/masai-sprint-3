@@ -7,7 +7,7 @@ function performSearch() {
     // var data = null
     var titleSearch = document.getElementById("movieSearch").value
     var xhr = new XMLHttpRequest()
-    xhr.open('GET', 'http://www.omdbapi.com/?s=' + titleSearch + '&apikey=8676d25e')
+    xhr.open('GET', 'https://www.omdbapi.com/?s=' + titleSearch + '&apikey=8676d25e')
     xhr.send()
     xhr.onload = function () {
         if (xhr.status == 200) {
@@ -78,7 +78,7 @@ function moredetails(e){
     var movieid=data['Search'][num]['imdbID']
     
     var xhr=new XMLHttpRequest();
-    xhr.open('GET','http://www.omdbapi.com/?i=' + movieid + '&apikey=8676d25e')
+    xhr.open('GET','https://www.omdbapi.com/?i=' + movieid + '&apikey=8676d25e')
     xhr.send()
     xhr.onload=function(){
         details=JSON.parse(xhr.response)
