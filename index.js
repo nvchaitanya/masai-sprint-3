@@ -16,6 +16,7 @@ function performSearch() {
                 alert("Invalid details...Movie Not found!")
             }
             else{
+                alert('Your Requested details are below...!')
                 populatePages(data)
             }
         }
